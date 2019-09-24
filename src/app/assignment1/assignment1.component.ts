@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignment1Component implements OnInit {
 
-  constructor() { }
+  allow = false;
+  msg = 'No msg';
+  constructor() { 
+    setTimeout(() => {   
+      this.allow = true;
+     }, 2000)
+  }
 
   ngOnInit() {
+  }
+
+  executeMethod(){
+    console.log("Hi");
+    this.msg = 'Msg from TS!';
   }
 
 }
