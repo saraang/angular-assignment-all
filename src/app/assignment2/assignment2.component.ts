@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignment2Component implements OnInit {
 
+
+  name = '';
   constructor() { }
 
   ngOnInit() {
@@ -14,6 +16,7 @@ export class Assignment2Component implements OnInit {
 
   changes(event: any){
     console.log(event);
+    this.name = (<HTMLInputElement>event.target).value;
   }
 
 }
